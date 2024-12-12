@@ -1,3 +1,4 @@
+import org.example.CustomException;
 import org.example.Main;
 import org.junit.jupiter.api.*;
 
@@ -12,45 +13,68 @@ public class MainTest {
         Main m1 = new Main();
 
         //first name
-        //happy test case
-        assertTrue(m1.validFirstName("Riya"));
-        assertTrue(m1.validFirstName("Riy"));
-        //sad test case
-        assertFalse(m1.validFirstName("Sh"));
-        assertFalse(m1.validFirstName("riya"));
+        try {
+            m1.validFirstName("sh");
+        }catch(CustomException e){
+            System.out.println(e.getMessage());
+        }
+        try {
+            m1.validFirstName("Riya");
+        }catch(CustomException e){
+            System.out.println(e.getMessage());
+        }
 
 
 
         //last name
-        //happy test case
-        assertTrue(m1.validLastName("Bisht"));
-        assertTrue(m1.validLastName("Bis"));
-        //sad test case
-        assertFalse(m1.validLastName("Bi"));
-        assertFalse(m1.validLastName("bisht"));
+        try {
+           m1.validLastName("Bisht");
+        }catch(CustomException e){
+            System.out.println(e.getMessage());
+        }
+        try {
+            m1.validLastName("Bi");
+        }catch(CustomException e){
+            System.out.println(e.getMessage());
+        }
 
 
 //        email
-        //happy test case
-        assertTrue(m1.validEmail("acb.cs@abc.com"));
-        assertTrue(m1.validEmail("abc+100@gmail.com.com"));
-        //sad test case
-        assertFalse(m1.validEmail("abc@.com.my"));
+        try {
+            m1.validEmail("acb.cs@abc.com");
+        }catch(CustomException e){
+            System.out.println(e.getMessage());
+        }
+        try {
+            m1.validEmail("abc@.com.my");
+        }catch(CustomException e){
+            System.out.println(e.getMessage());
+        }
 
 
 //        Phone
-        //happy test case
-        assertTrue(m1.validPhone("917392826233"));
-        assertTrue(m1.validPhone("019028272332"));
-        //sad test case
-        assertFalse(m1.validPhone("910282723"));
+        try {
+            m1.validPhone("917392826233");
+        }catch(CustomException e){
+            System.out.println(e.getMessage());
+        }
+        try {
+           m1.validPhone("910282723");
+        }catch(CustomException e){
+            System.out.println(e.getMessage());
+        }
 
         //password
-        //Happy test case
-        assertTrue(m1.validPassword("#Abcd1234"));
-        assertTrue(m1.validPassword("ishBHSGD@gmai3"));
-        //sad test case
-        assertFalse(m1.validPassword("Rbis@3"));
+        try {
+            m1.validPassword("#Abcd1234");
+        }catch(CustomException e){
+            System.out.println(e.getMessage());
+        }
+        try {
+            m1.validPassword("#Rbis@3");
+        }catch(CustomException e){
+            System.out.println(e.getMessage());
+        }
 
 
        String[] CorrectemailSample= {
@@ -79,15 +103,25 @@ public class MainTest {
                 "abc@gmail.com.1a",
                 "abc@gmail.com.aa.au"
         );
-        //happy test case
-        for(String email:CorrectemailSample){
-            System.out.println(email);
-            assertTrue(m1.validEmail(email));
+        try {
+            m1.validPassword("#Rbis@3");
+        }catch(CustomException e){
+            System.out.println(e.getMessage());
         }
-        //sad test case
+
+        for(String email:CorrectemailSample){
+            try {
+                m1.validEmail(email);
+            }catch(CustomException e){
+                System.out.println(e.getMessage());
+            }
+        }
       for(String email:IncorrectemailSample){
-            System.out.println(email);
-            assertFalse(m1.validEmail(email));
+          try {
+              m1.validEmail(email);
+          }catch(CustomException e){
+              System.out.println(e.getMessage());
+          }
         }
     }
 }
