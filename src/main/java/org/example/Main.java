@@ -20,6 +20,11 @@ public class Main {
         return phone.matches("^[0-9]{1,}[0-9]{10}$");
     }
 
+    //password
+    public boolean validPassword(String pswrd){
+        return pswrd.matches("^.{8,}$");
+    }
+
     public static void main(String[] args) {
         System.out.println("User Registration Form");
     }

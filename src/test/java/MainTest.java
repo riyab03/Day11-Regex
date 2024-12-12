@@ -31,6 +31,10 @@ public class MainTest {
         assertTrue(m1.validPhone("019028272332"));
         assertFalse(m1.validPhone("910282723"));
 
+        //password
+        assertTrue(m1.validPassword("Riya@2005"));
+        assertTrue(m1.validPassword("bisht%76934"));
+        assertFalse(m1.validPassword("9102723"));
     }
 }
 
