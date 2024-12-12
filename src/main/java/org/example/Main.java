@@ -1,4 +1,7 @@
 package org.example;
+
+import java.util.List;
+
 public class Main {
 
     //first name
@@ -13,7 +16,7 @@ public class Main {
 
     //Email
     public boolean validEmail(String mail){
-        return mail.matches("^[A-Za-z.+-/%&#]+@[a-zA-Z]+\\.[a-zA-Z]{2,}(\\.[a-zA-Z]{2,})?$");
+        return mail.matches("^[A-Za-z0-9]+[+/%&#.-]?[A-Za-z0-9]+@[a-zA-Z0-9]+\\.[a-zA-Z]{2,}(\\.[a-zA-Z]{2,})?$");
     }
     //phone number
     public boolean validPhone(String phone){
@@ -28,6 +31,7 @@ public class Main {
         String r4="^([^@#$%^&+=!]*[@#$%^&+=!][^@#$%^&+=!]*)$";
         return (pswrd.matches(r1) && pswrd.matches(r4));
     }
+
 
     public static void main(String[] args) {
         System.out.println("User Registration Form");
