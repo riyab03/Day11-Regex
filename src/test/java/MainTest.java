@@ -15,6 +15,11 @@ public class MainTest {
         assertTrue(m1.validFirstName("Riy"));
 
 
+        //last name
+        assertTrue(m1.validLastName("Bisht"));
+        assertFalse(m1.validLastName("Bi"));
+        assertFalse(m1.validLastName("bisht"));
+        assertTrue(m1.validLastName("Bis"));
     }
 }
 
