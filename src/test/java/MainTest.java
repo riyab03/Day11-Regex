@@ -33,7 +33,7 @@ public class MainTest {
 
         //password
         assertTrue(m1.validPassword("Abcd@1234"));
-        assertTrue(m1.validPassword("ishBshitrjr"));
+        assertTrue(m1.validPassword("ishBshitrjr3"));
         assertFalse(m1.validPassword("9102723"));
     }
 }

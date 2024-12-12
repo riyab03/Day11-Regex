@@ -24,7 +24,8 @@ public class Main {
     public boolean validPassword(String pswrd){
         String r1="^.{8,}$";
         String r2="^(.*[A-Z].*)$";
-        return (pswrd.matches(r1) && pswrd.matches(r2));
+        String r3="^(.*[0-9].*)$";
+        return (pswrd.matches(r1) && pswrd.matches(r2) && pswrd.matches(r3));
     }
 
     public static void main(String[] args) {
