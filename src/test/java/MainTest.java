@@ -12,31 +12,44 @@ public class MainTest {
         Main m1 = new Main();
 
         //first name
+        //happy test case
         assertTrue(m1.validFirstName("Riya"));
+        assertTrue(m1.validFirstName("Riy"));
+        //sad test case
         assertFalse(m1.validFirstName("Sh"));
         assertFalse(m1.validFirstName("riya"));
-        assertTrue(m1.validFirstName("Riy"));
+
 
 
         //last name
+        //happy test case
         assertTrue(m1.validLastName("Bisht"));
+        assertTrue(m1.validLastName("Bis"));
+        //sad test case
         assertFalse(m1.validLastName("Bi"));
         assertFalse(m1.validLastName("bisht"));
-        assertTrue(m1.validLastName("Bis"));
+
 
 //        email
+        //happy test case
         assertTrue(m1.validEmail("acb.cs@abc.com"));
         assertTrue(m1.validEmail("abc+100@gmail.com.com"));
+        //sad test case
+        assertFalse(m1.validEmail("abc@.com.my"));
 
 
 //        Phone
+        //happy test case
         assertTrue(m1.validPhone("917392826233"));
         assertTrue(m1.validPhone("019028272332"));
+        //sad test case
         assertFalse(m1.validPhone("910282723"));
 
         //password
+        //Happy test case
         assertTrue(m1.validPassword("#Abcd1234"));
         assertTrue(m1.validPassword("ishBHSGD@gmai3"));
+        //sad test case
         assertFalse(m1.validPassword("Rbis@3"));
 
 
@@ -66,10 +79,12 @@ public class MainTest {
                 "abc@gmail.com.1a",
                 "abc@gmail.com.aa.au"
         );
+        //happy test case
         for(String email:CorrectemailSample){
             System.out.println(email);
             assertTrue(m1.validEmail(email));
         }
+        //sad test case
       for(String email:IncorrectemailSample){
             System.out.println(email);
             assertFalse(m1.validEmail(email));
