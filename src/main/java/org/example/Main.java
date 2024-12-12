@@ -15,11 +15,13 @@ public class Main {
     public boolean validEmail(String mail){
         return mail.matches("^[A-Za-z.+-/%&#]+@[a-zA-Z]+\\.[a-zA-Z]{2,}(\\.[a-zA-Z]{2,})?$");
     }
-
-
-
+    //phone number
+    public boolean validPhone(String phone){
+        return phone.matches("^[0-9]{1,}[0-9]{10}$");
+    }
 
     public static void main(String[] args) {
         System.out.println("User Registration Form");
     }
+
 }

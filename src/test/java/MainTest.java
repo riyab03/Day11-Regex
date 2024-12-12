@@ -26,7 +26,10 @@ public class MainTest {
         assertTrue(m1.validEmail("bisht.com@gmail.co.in"));
         assertFalse(m1.validEmail("Bis.com#co@gmail"));
 
-
+        //Phone
+        assertTrue(m1.validPhone("917392826233"));
+        assertTrue(m1.validPhone("019028272332"));
+        assertFalse(m1.validPhone("910282723"));
 
     }
 }
