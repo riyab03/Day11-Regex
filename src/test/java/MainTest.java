@@ -20,6 +20,14 @@ public class MainTest {
         assertFalse(m1.validLastName("Bi"));
         assertFalse(m1.validLastName("bisht"));
         assertTrue(m1.validLastName("Bis"));
+
+        //email
+        assertTrue(m1.validEmail("riya@gmail.com"));
+        assertTrue(m1.validEmail("bisht.com@gmail.co.in"));
+        assertFalse(m1.validEmail("Bis.com#co@gmail"));
+
+
+
     }
 }
 
