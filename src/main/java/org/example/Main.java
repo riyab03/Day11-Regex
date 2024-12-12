@@ -22,7 +22,9 @@ public class Main {
 
     //password
     public boolean validPassword(String pswrd){
-        return pswrd.matches("^.{8,}$");
+        String r1="^.{8,}$";
+        String r2="^(.*[A-Z].*)$";
+        return (pswrd.matches(r1) && pswrd.matches(r2));
     }
 
     public static void main(String[] args) {
